@@ -1,0 +1,12 @@
+version: "3.9"
+volumes:
+  pg_data:
+services:
+  db:
+    image: postgres:13.4-alpine
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    ports:
+        - "54322:5432"
