@@ -53,9 +53,7 @@ class DBManager:
         return self.db_session.query(model).filter_by(**kwargs)
 
     def __enter__(self):
-        print("enter")
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
-        print("exit")
         self.db_session.close()
