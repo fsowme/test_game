@@ -1,12 +1,11 @@
+import random
+
 from esp.abs import BaseESPManager
 
 
 class ESPManager(BaseESPManager):
-    def user_exists(self, *args) -> bool:
-        import random
+    def user_exists(self, email) -> bool:
+        return random.choice(True, False)
 
-        return False
-        # return random.randrange(2)
-
-    def add_user(self, *args):
+    def add_user(self, email):
         pass
